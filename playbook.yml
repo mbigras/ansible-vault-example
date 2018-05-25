@@ -8,7 +8,7 @@
     - name: Print something
       debug: msg="hello {{ thing }}"
 
-    - name: Run an executable
+    - name: Run an encrypted executable
       script: ./encryptedbinary
       register: result
 
