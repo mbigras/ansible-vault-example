@@ -7,3 +7,10 @@
   tasks:
     - name: Print something
       debug: msg="hello {{ thing }}"
+
+    - name: Run an executable
+      script: ./encryptedbinary
+      register: result
+
+    - name: Verify executable output
+      debug: msg="{{ result.stdout }}"
