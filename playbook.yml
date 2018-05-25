@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: no
+  vars_files:
+    - vars.yml
+    - vault.yml
+  tasks:
+    - name: Print something
+      debug: msg="hello {{ thing }}"
